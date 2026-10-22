@@ -1,0 +1,12 @@
+python==3.12.3
+platform==Linux-6.18.44-fc-v139-x86_64-with-glibc2.39
+autogluon.tabular==1.6.3
+autogluon.core==1.6.3
+autogluon.features==1.6.3
+autogluon.common==1.6.3
+scikit-learn==1.9.1
+pandas==2.3.3
+numpy==2.5.4
+lightgbm==4.7.0
+catboost==1.2.10
+xgboost-cpu==3.3.0

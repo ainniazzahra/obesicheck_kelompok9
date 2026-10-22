@@ -1,0 +1,179 @@
+{
+  "split": "test (20%, tidak dipakai untuk seleksi)",
+  "test_rows": 418,
+  "accuracy": 0.9593301435406698,
+  "macro_precision": 0.9577601909427801,
+  "macro_recall": 0.958546759609762,
+  "macro_f1": 0.9579621907091079,
+  "labels": [
+    "Insufficient_Weight",
+    "Normal_Weight",
+    "Obesity_Type_I",
+    "Obesity_Type_II",
+    "Obesity_Type_III",
+    "Overweight_Level_I",
+    "Overweight_Level_II"
+  ],
+  "confusion_matrix": [
+    [
+      53,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      53,
+      0,
+      0,
+      0,
+      3,
+      1
+    ],
+    [
+      0,
+      0,
+      67,
+      0,
+      0,
+      2,
+      1
+    ],
+    [
+      0,
+      0,
+      0,
+      60,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      1,
+      64,
+      0,
+      0
+    ],
+    [
+      0,
+      4,
+      0,
+      0,
+      0,
+      48,
+      3
+    ],
+    [
+      0,
+      1,
+      0,
+      0,
+      0,
+      1,
+      56
+    ]
+  ],
+  "classes_without_predictions": [],
+  "test_class_distribution": {
+    "Insufficient_Weight": {
+      "count": 53,
+      "proportion": 0.1268
+    },
+    "Normal_Weight": {
+      "count": 57,
+      "proportion": 0.1364
+    },
+    "Obesity_Type_I": {
+      "count": 70,
+      "proportion": 0.1675
+    },
+    "Obesity_Type_II": {
+      "count": 60,
+      "proportion": 0.1435
+    },
+    "Obesity_Type_III": {
+      "count": 65,
+      "proportion": 0.1555
+    },
+    "Overweight_Level_I": {
+      "count": 55,
+      "proportion": 0.1316
+    },
+    "Overweight_Level_II": {
+      "count": 58,
+      "proportion": 0.1388
+    }
+  },
+  "classification_report": {
+    "Insufficient_Weight": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 53.0
+    },
+    "Normal_Weight": {
+      "precision": 0.9137931034482759,
+      "recall": 0.9298245614035088,
+      "f1-score": 0.9217391304347826,
+      "support": 57.0
+    },
+    "Obesity_Type_I": {
+      "precision": 1.0,
+      "recall": 0.9571428571428572,
+      "f1-score": 0.9781021897810219,
+      "support": 70.0
+    },
+    "Obesity_Type_II": {
+      "precision": 0.9836065573770492,
+      "recall": 1.0,
+      "f1-score": 0.9917355371900827,
+      "support": 60.0
+    },
+    "Obesity_Type_III": {
+      "precision": 1.0,
+      "recall": 0.9846153846153847,
+      "f1-score": 0.9922480620155039,
+      "support": 65.0
+    },
+    "Overweight_Level_I": {
+      "precision": 0.8888888888888888,
+      "recall": 0.8727272727272727,
+      "f1-score": 0.8807339449541285,
+      "support": 55.0
+    },
+    "Overweight_Level_II": {
+      "precision": 0.9180327868852459,
+      "recall": 0.9655172413793104,
+      "f1-score": 0.9411764705882353,
+      "support": 58.0
+    },
+    "accuracy": 0.9593301435406698,
+    "macro avg": {
+      "precision": 0.9577601909427801,
+      "recall": 0.958546759609762,
+      "f1-score": 0.9579621907091079,
+      "support": 418.0
+    },
+    "weighted avg": {
+      "precision": 0.9598980642760955,
+      "recall": 0.9593301435406698,
+      "f1-score": 0.9594142159054103,
+      "support": 418.0
+    }
+  },
+  "best_model": "WeightedEnsemble_L2",
+  "validation_macro_f1_of_best_model": 0.9750239613384962,
+  "deployable": false,
+  "sensitivity_likely_original_rows": {
+    "n": 103,
+    "accuracy": 0.8640776699029126,
+    "macro_f1": 0.7217050141914898,
+    "note": "Heuristik baris non-sintetis; sebaran kelas sangat timpang (didominasi Normal_Weight). Hanya indikatif."
+  }
+}

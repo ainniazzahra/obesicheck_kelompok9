@@ -1,0 +1,143 @@
+Verbosity: 2 (Standard Logging)
+	Failed to import torch or check CUDA availability!Please ensure you have the correct version of PyTorch installed by running `pip install -U torch`
+=================== System Info ===================
+AutoGluon Version:  1.6.3
+Python Version:     3.12.3
+Operating System:   Linux
+Platform Machine:   x86_64
+Platform Version:   #1 SMP PREEMPT_DYNAMIC @0
+CPU Count:          2
+Pytorch Version:    Can't import torch
+CUDA Version:       Can't get cuda version from torch
+Memory Avail:       7.18 GB / 7.84 GB (91.6%)
+Disk Space Avail:   28.88 GB / 251.97 GB (11.5%)
+===================================================
+Presets specified: ['medium_quality']
+Using hyperparameters preset: hyperparameters='default'
+Beginning AutoGluon training ... Time limit = 300s
+AutoGluon will save models to "/home/claude/work/proj/ml/models_reference/WithHeightWeight"
+Train Data Rows:    1335
+Train Data Columns: 16
+Tuning Data Rows:    334
+Tuning Data Columns: 16
+Label Column:       NObeyesdad
+Problem Type:       multiclass
+Preprocessing data...
+Train Data Class Count: 7
+Using Feature Generators to preprocess the data ...
+Fitting AutoMLPipelineFeatureGenerator...
+	Available Memory:                    7355.71 MB
+	Train Data (Original)  Memory Usage: 0.80 MB (0.0% of available memory)
+	Inferring data type of each feature based on column values. Set feature_metadata_in to manually specify special dtypes of the features.
+	Stage 1 Generators:
+		Fitting AsTypeFeatureGenerator...
+			Note: Converting 5 features to boolean dtype as they only contain 2 unique values.
+	Stage 2 Generators:
+		Fitting FillNaFeatureGenerator...
+	Stage 3 Generators:
+		Fitting IdentityFeatureGenerator...
+		Fitting CategoryFeatureGenerator...
+			Fitting CategoryMemoryMinimizeFeatureGenerator...
+	Stage 4 Generators:
+		Fitting DropUniqueFeatureGenerator...
+	Stage 5 Generators:
+		Fitting DropDuplicatesFeatureGenerator...
+	Types of features in original data (raw dtype, special dtypes):
+		('float', [])  : 8 | ['Age', 'Height', 'Weight', 'FCVC', 'NCP', ...]
+		('object', []) : 8 | ['Gender', 'family_history_with_overweight', 'FAVC', 'CAEC', 'SMOKE', ...]
+	Types of features in processed data (raw dtype, special dtypes):
+		('category', [])  : 3 | ['CAEC', 'CALC', 'MTRANS']
+		('float', [])     : 8 | ['Age', 'Height', 'Weight', 'FCVC', 'NCP', ...]
+		('int', ['bool']) : 5 | ['Gender', 'family_history_with_overweight', 'FAVC', 'SMOKE', 'SCC']
+	0.1s = Fit runtime
+	16 features in original data used to generate 16 features in processed data.
+	Train Data (Processed) Memory Usage: 0.12 MB (0.0% of available memory)
+Data preprocessing and feature engineering runtime = 0.07s ...
+AutoGluon will gauge predictive performance using evaluation metric: 'f1_macro'
+	To change this, specify the eval_metric parameter of Predictor()
+User-specified model hyperparameters to be fit:
+{
+	'NN_TORCH': [{}],
+	'GBM': [{'extra_trees': True, 'ag_args': {'name_suffix': 'XT'}}, {}, {'learning_rate': 0.03, 'num_leaves': 128, 'feature_fraction': 0.9, 'min_data_in_leaf': 3, 'ag_args': {'name_suffix': 'Large', 'priority': 0, 'hyperparameter_tune_kwargs': None}}],
+	'CAT': [{}],
+	'XGB': [{}],
+	'FASTAI': [{}],
+	'RF': [{'criterion': 'gini', 'ag_args': {'name_suffix': 'Gini', 'problem_types': ['binary', 'multiclass']}}, {'criterion': 'entropy', 'ag_args': {'name_suffix': 'Entr', 'problem_types': ['binary', 'multiclass']}}, {'criterion': 'squared_error', 'ag_args': {'name_suffix': 'MSE', 'problem_types': ['regression', 'quantile']}}],
+	'XT': [{'criterion': 'gini', 'ag_args': {'name_suffix': 'Gini', 'problem_types': ['binary', 'multiclass']}}, {'criterion': 'entropy', 'ag_args': {'name_suffix': 'Entr', 'problem_types': ['binary', 'multiclass']}}, {'criterion': 'squared_error', 'ag_args': {'name_suffix': 'MSE', 'problem_types': ['regression', 'quantile']}}],
+}
+Fitting 11 L1 models, fit_strategy="sequential" ...
+Fitting model: NeuralNetFastAI ... Training model for up to 299.93s of the 299.93s of remaining time.
+	Failed to import torch or check CUDA availability!Please ensure you have the correct version of PyTorch installed by running `pip install -U torch`
+	Fitting with cpus=2, gpus=0, mem=0.0/7.2 GB
+	Warning: Exception caused NeuralNetFastAI to fail during training (ImportError)... Skipping this model.
+		Import fastai failed. A quick tip is to install via `pip install autogluon.tabular[fastai]==1.6.3`. 
+Fitting model: LightGBMXT ... Training model for up to 299.87s of the 299.87s of remaining time.
+	Failed to import torch or check CUDA availability!Please ensure you have the correct version of PyTorch installed by running `pip install -U torch`
+	Fitting with cpus=2, gpus=0, mem=0.2/7.2 GB
+	0.9588	 = Validation score   (f1_macro)
+	2.76s	 = Training   runtime
+	0.03s	 = Validation runtime
+Fitting model: LightGBM ... Training model for up to 296.98s of the 296.97s of remaining time.
+	Failed to import torch or check CUDA availability!Please ensure you have the correct version of PyTorch installed by running `pip install -U torch`
+	Fitting with cpus=2, gpus=0, mem=0.2/7.2 GB
+	0.9686	 = Validation score   (f1_macro)
+	2.6s	 = Training   runtime
+	0.03s	 = Validation runtime
+Fitting model: RandomForestGini ... Training model for up to 294.25s of the 294.25s of remaining time.
+	Failed to import torch or check CUDA availability!Please ensure you have the correct version of PyTorch installed by running `pip install -U torch`
+	Fitting with cpus=2, gpus=0, mem=0.0/7.2 GB
+	0.9695	 = Validation score   (f1_macro)
+	0.76s	 = Training   runtime
+	0.1s	 = Validation runtime
+Fitting model: RandomForestEntr ... Training model for up to 293.37s of the 293.37s of remaining time.
+	Failed to import torch or check CUDA availability!Please ensure you have the correct version of PyTorch installed by running `pip install -U torch`
+	Fitting with cpus=2, gpus=0, mem=0.0/7.1 GB
+	0.9658	 = Validation score   (f1_macro)
+	0.79s	 = Training   runtime
+	0.09s	 = Validation runtime
+Fitting model: CatBoost ... Training model for up to 292.47s of the 292.46s of remaining time.
+	Failed to import torch or check CUDA availability!Please ensure you have the correct version of PyTorch installed by running `pip install -U torch`
+	Fitting with cpus=2, gpus=0
+	0.972	 = Validation score   (f1_macro)
+	191.64s	 = Training   runtime
+	0.02s	 = Validation runtime
+Fitting model: ExtraTreesGini ... Training model for up to 100.76s of the 100.76s of remaining time.
+	Failed to import torch or check CUDA availability!Please ensure you have the correct version of PyTorch installed by running `pip install -U torch`
+	Fitting with cpus=2, gpus=0, mem=0.0/7.0 GB
+	0.9369	 = Validation score   (f1_macro)
+	0.64s	 = Training   runtime
+	0.09s	 = Validation runtime
+Fitting model: ExtraTreesEntr ... Training model for up to 100.00s of the 100.00s of remaining time.
+	Failed to import torch or check CUDA availability!Please ensure you have the correct version of PyTorch installed by running `pip install -U torch`
+	Fitting with cpus=2, gpus=0, mem=0.0/6.9 GB
+	0.9464	 = Validation score   (f1_macro)
+	0.58s	 = Training   runtime
+	0.08s	 = Validation runtime
+Fitting model: XGBoost ... Training model for up to 99.32s of the 99.32s of remaining time.
+	Failed to import torch or check CUDA availability!Please ensure you have the correct version of PyTorch installed by running `pip install -U torch`
+	Fitting with cpus=2, gpus=0
+	0.975	 = Validation score   (f1_macro)
+	1.63s	 = Training   runtime
+	0.01s	 = Validation runtime
+Fitting model: NeuralNetTorch ... Training model for up to 97.66s of the 97.66s of remaining time.
+	Failed to import torch or check CUDA availability!Please ensure you have the correct version of PyTorch installed by running `pip install -U torch`
+	Fitting with cpus=2, gpus=0, mem=0.0/6.9 GB
+	Warning: Exception caused NeuralNetTorch to fail during training (ImportError)... Skipping this model.
+		Unable to import dependency torch
+A quick tip is to install via `pip install torch`.
+The minimum torch version is currently 2.10.
+Fitting model: LightGBMLarge ... Training model for up to 97.60s of the 97.60s of remaining time.
+	Failed to import torch or check CUDA availability!Please ensure you have the correct version of PyTorch installed by running `pip install -U torch`
+	Fitting with cpus=2, gpus=0, mem=0.5/6.9 GB
+	0.9688	 = Validation score   (f1_macro)
+	4.03s	 = Training   runtime
+	0.05s	 = Validation runtime
+Fitting model: WeightedEnsemble_L2 ... Training model for up to 299.93s of the 93.26s of remaining time.
+	Failed to import torch or check CUDA availability!Please ensure you have the correct version of PyTorch installed by running `pip install -U torch`
+	Fitting 1 model on all data | Fitting with cpus=2, gpus=0, mem=0.0/6.8 GB
+	Ensemble Weights: {'XGBoost': 1.0}
+	0.975	 = Validation score   (f1_macro)
+	0.18s	 = Training   runtime
+	0.0s	 = Validation runtime
+AutoGluon training complete, total runtime = 207.07s ... Best model: WeightedEnsemble_L2 | Estimated inference throughput: 38245.6 rows/s (334 batch size)
+TabularPredictor saved. To load, use: predictor = TabularPredictor.load("/home/claude/work/proj/ml/models_reference/WithHeightWeight")

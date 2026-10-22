@@ -1,0 +1,8 @@
+,prediksi_Insufficient_Weight,prediksi_Normal_Weight,prediksi_Obesity_Type_I,prediksi_Obesity_Type_II,prediksi_Obesity_Type_III,prediksi_Overweight_Level_I,prediksi_Overweight_Level_II
+aktual_Insufficient_Weight,53,0,0,0,0,0,0
+aktual_Normal_Weight,0,53,0,0,0,3,1
+aktual_Obesity_Type_I,0,0,67,0,0,2,1
+aktual_Obesity_Type_II,0,0,0,60,0,0,0
+aktual_Obesity_Type_III,0,0,0,1,64,0,0
+aktual_Overweight_Level_I,0,4,0,0,0,48,3
+aktual_Overweight_Level_II,0,1,0,0,0,1,56
