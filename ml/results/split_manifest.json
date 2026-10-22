@@ -1,0 +1,179 @@
+{
+  "random_seed": 42,
+  "split": "stratified 80:20 (dev:test); dev dipecah stratified 80:20 (fit:validation)",
+  "rows_original": 2111,
+  "exact_duplicate_rows_removed": 24,
+  "rows_after_dedup": 2087,
+  "development_rows": 1669,
+  "train_fit_rows": 1335,
+  "validation_rows": 334,
+  "test_rows": 418,
+  "class_distribution": {
+    "all": {
+      "Insufficient_Weight": {
+        "count": 267,
+        "proportion": 0.1279
+      },
+      "Normal_Weight": {
+        "count": 282,
+        "proportion": 0.1351
+      },
+      "Obesity_Type_I": {
+        "count": 351,
+        "proportion": 0.1682
+      },
+      "Obesity_Type_II": {
+        "count": 297,
+        "proportion": 0.1423
+      },
+      "Obesity_Type_III": {
+        "count": 324,
+        "proportion": 0.1552
+      },
+      "Overweight_Level_I": {
+        "count": 276,
+        "proportion": 0.1322
+      },
+      "Overweight_Level_II": {
+        "count": 290,
+        "proportion": 0.139
+      }
+    },
+    "train_fit": {
+      "Insufficient_Weight": {
+        "count": 171,
+        "proportion": 0.1281
+      },
+      "Normal_Weight": {
+        "count": 180,
+        "proportion": 0.1348
+      },
+      "Obesity_Type_I": {
+        "count": 225,
+        "proportion": 0.1685
+      },
+      "Obesity_Type_II": {
+        "count": 189,
+        "proportion": 0.1416
+      },
+      "Obesity_Type_III": {
+        "count": 207,
+        "proportion": 0.1551
+      },
+      "Overweight_Level_I": {
+        "count": 177,
+        "proportion": 0.1326
+      },
+      "Overweight_Level_II": {
+        "count": 186,
+        "proportion": 0.1393
+      }
+    },
+    "validation": {
+      "Insufficient_Weight": {
+        "count": 43,
+        "proportion": 0.1287
+      },
+      "Normal_Weight": {
+        "count": 45,
+        "proportion": 0.1347
+      },
+      "Obesity_Type_I": {
+        "count": 56,
+        "proportion": 0.1677
+      },
+      "Obesity_Type_II": {
+        "count": 48,
+        "proportion": 0.1437
+      },
+      "Obesity_Type_III": {
+        "count": 52,
+        "proportion": 0.1557
+      },
+      "Overweight_Level_I": {
+        "count": 44,
+        "proportion": 0.1317
+      },
+      "Overweight_Level_II": {
+        "count": 46,
+        "proportion": 0.1377
+      }
+    },
+    "test": {
+      "Insufficient_Weight": {
+        "count": 53,
+        "proportion": 0.1268
+      },
+      "Normal_Weight": {
+        "count": 57,
+        "proportion": 0.1364
+      },
+      "Obesity_Type_I": {
+        "count": 70,
+        "proportion": 0.1675
+      },
+      "Obesity_Type_II": {
+        "count": 60,
+        "proportion": 0.1435
+      },
+      "Obesity_Type_III": {
+        "count": 65,
+        "proportion": 0.1555
+      },
+      "Overweight_Level_I": {
+        "count": 55,
+        "proportion": 0.1316
+      },
+      "Overweight_Level_II": {
+        "count": 58,
+        "proportion": 0.1388
+      }
+    }
+  },
+  "source_row_id_overlap": {
+    "fit_val": 0,
+    "fit_test": 0,
+    "val_test": 0
+  },
+  "test_rows_with_identical_features_in_development": 1,
+  "target": "NObeyesdad",
+  "features": [
+    "Gender",
+    "Age",
+    "family_history_with_overweight",
+    "FAVC",
+    "FCVC",
+    "NCP",
+    "CAEC",
+    "SMOKE",
+    "CH2O",
+    "SCC",
+    "FAF",
+    "TUE",
+    "CALC",
+    "MTRANS"
+  ],
+  "excluded_columns": [
+    "Height",
+    "Weight"
+  ],
+  "missing_values_by_column": {
+    "Gender": 0,
+    "Age": 0,
+    "Height": 0,
+    "Weight": 0,
+    "family_history_with_overweight": 0,
+    "FAVC": 0,
+    "FCVC": 0,
+    "NCP": 0,
+    "CAEC": 0,
+    "SMOKE": 0,
+    "CH2O": 0,
+    "SCC": 0,
+    "FAF": 0,
+    "TUE": 0,
+    "CALC": 0,
+    "MTRANS": 0,
+    "NObeyesdad": 0
+  }
+}

@@ -1,0 +1,236 @@
+{
+  "file": "ml/data/ObesityDataSet_raw_and_data_sinthetic.csv",
+  "rows": 2111,
+  "columns": 17,
+  "dtypes": {
+    "Gender": "object",
+    "Age": "float64",
+    "Height": "float64",
+    "Weight": "float64",
+    "family_history_with_overweight": "object",
+    "FAVC": "object",
+    "FCVC": "float64",
+    "NCP": "float64",
+    "CAEC": "object",
+    "SMOKE": "object",
+    "CH2O": "float64",
+    "SCC": "object",
+    "FAF": "float64",
+    "TUE": "float64",
+    "CALC": "object",
+    "MTRANS": "object",
+    "NObeyesdad": "object"
+  },
+  "missing_values": {
+    "Gender": 0,
+    "Age": 0,
+    "Height": 0,
+    "Weight": 0,
+    "family_history_with_overweight": 0,
+    "FAVC": 0,
+    "FCVC": 0,
+    "NCP": 0,
+    "CAEC": 0,
+    "SMOKE": 0,
+    "CH2O": 0,
+    "SCC": 0,
+    "FAF": 0,
+    "TUE": 0,
+    "CALC": 0,
+    "MTRANS": 0,
+    "NObeyesdad": 0
+  },
+  "exact_duplicate_rows": 24,
+  "target": "NObeyesdad",
+  "target_counts": {
+    "Obesity_Type_I": 351,
+    "Obesity_Type_III": 324,
+    "Obesity_Type_II": 297,
+    "Overweight_Level_I": 290,
+    "Overweight_Level_II": 290,
+    "Normal_Weight": 287,
+    "Insufficient_Weight": 272
+  },
+  "categorical_levels": {
+    "Gender": {
+      "Male": 1068,
+      "Female": 1043
+    },
+    "family_history_with_overweight": {
+      "yes": 1726,
+      "no": 385
+    },
+    "FAVC": {
+      "yes": 1866,
+      "no": 245
+    },
+    "CAEC": {
+      "Sometimes": 1765,
+      "Frequently": 242,
+      "Always": 53,
+      "no": 51
+    },
+    "SMOKE": {
+      "no": 2067,
+      "yes": 44
+    },
+    "SCC": {
+      "no": 2015,
+      "yes": 96
+    },
+    "CALC": {
+      "Sometimes": 1401,
+      "no": 639,
+      "Frequently": 70,
+      "Always": 1
+    },
+    "MTRANS": {
+      "Public_Transportation": 1580,
+      "Automobile": 457,
+      "Walking": 56,
+      "Motorbike": 11,
+      "Bike": 7
+    }
+  },
+  "numeric_summary": {
+    "Age": {
+      "count": 2111.0,
+      "mean": 24.3126,
+      "std": 6.346,
+      "min": 14.0,
+      "25%": 19.9472,
+      "50%": 22.7779,
+      "75%": 26.0,
+      "max": 61.0
+    },
+    "Height": {
+      "count": 2111.0,
+      "mean": 1.7017,
+      "std": 0.0933,
+      "min": 1.45,
+      "25%": 1.63,
+      "50%": 1.7005,
+      "75%": 1.7685,
+      "max": 1.98
+    },
+    "Weight": {
+      "count": 2111.0,
+      "mean": 86.5861,
+      "std": 26.1912,
+      "min": 39.0,
+      "25%": 65.4733,
+      "50%": 83.0,
+      "75%": 107.4307,
+      "max": 173.0
+    },
+    "FCVC": {
+      "count": 2111.0,
+      "mean": 2.419,
+      "std": 0.5339,
+      "min": 1.0,
+      "25%": 2.0,
+      "50%": 2.3855,
+      "75%": 3.0,
+      "max": 3.0
+    },
+    "NCP": {
+      "count": 2111.0,
+      "mean": 2.6856,
+      "std": 0.778,
+      "min": 1.0,
+      "25%": 2.6587,
+      "50%": 3.0,
+      "75%": 3.0,
+      "max": 4.0
+    },
+    "CH2O": {
+      "count": 2111.0,
+      "mean": 2.008,
+      "std": 0.613,
+      "min": 1.0,
+      "25%": 1.5848,
+      "50%": 2.0,
+      "75%": 2.4774,
+      "max": 3.0
+    },
+    "FAF": {
+      "count": 2111.0,
+      "mean": 1.0103,
+      "std": 0.8506,
+      "min": 0.0,
+      "25%": 0.1245,
+      "50%": 1.0,
+      "75%": 1.6667,
+      "max": 3.0
+    },
+    "TUE": {
+      "count": 2111.0,
+      "mean": 0.6579,
+      "std": 0.6089,
+      "min": 0.0,
+      "25%": 0.0,
+      "50%": 0.6254,
+      "75%": 1.0,
+      "max": 2.0
+    }
+  },
+  "leakage_check": {
+    "finding": "Label dibentuk dari BMI = Weight/Height^2. Height dan Weight dikeluarkan dari fitur model.",
+    "bmi_threshold_rule_agreement_with_label": 0.9517,
+    "bmi_range_per_class": {
+      "Insufficient_Weight": {
+        "min": 13.0,
+        "max": 19.08
+      },
+      "Normal_Weight": {
+        "min": 18.49,
+        "max": 24.91
+      },
+      "Obesity_Type_I": {
+        "min": 29.91,
+        "max": 35.17
+      },
+      "Obesity_Type_II": {
+        "min": 34.05,
+        "max": 39.79
+      },
+      "Obesity_Type_III": {
+        "min": 36.77,
+        "max": 50.81
+      },
+      "Overweight_Level_I": {
+        "min": 22.83,
+        "max": 28.77
+      },
+      "Overweight_Level_II": {
+        "min": 25.71,
+        "max": 30.36
+      }
+    },
+    "excluded_columns": [
+      "Height",
+      "Weight"
+    ],
+    "model_features": [
+      "Gender",
+      "Age",
+      "family_history_with_overweight",
+      "FAVC",
+      "FCVC",
+      "NCP",
+      "CAEC",
+      "SMOKE",
+      "CH2O",
+      "SCC",
+      "FAF",
+      "TUE",
+      "CALC",
+      "MTRANS"
+    ]
+  },
+  "synthetic_data_note": {
+    "likely_original_rows_heuristic": 513,
+    "likely_synthetic_rows_heuristic": 1598,
+    "note": "Heuristik (nilai bulat pada skala ordinal) - bukan penanda resmi dataset. UCI 544 menyatakan 77% data sintetis (SMOTE)."
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "model_version": "ag1.6.3-20261019-seed42",
+  "best_model": "WeightedEnsemble_L2",
+  "features": [
+    "Gender",
+    "Age",
+    "family_history_with_overweight",
+    "FAVC",
+    "FCVC",
+    "NCP",
+    "CAEC",
+    "SMOKE",
+    "CH2O",
+    "SCC",
+    "FAF",
+    "TUE",
+    "CALC",
+    "MTRANS"
+  ],
+  "classes": [
+    "Insufficient_Weight",
+    "Normal_Weight",
+    "Obesity_Type_I",
+    "Obesity_Type_II",
+    "Obesity_Type_III",
+    "Overweight_Level_I",
+    "Overweight_Level_II"
+  ],
+  "target": "NObeyesdad",
+  "metrics": {
+    "accuracy": 0.8708133971291866,
+    "macro_precision": 0.871433176617222,
+    "macro_recall": 0.8688122203871566,
+    "macro_f1": 0.8692398728958936
+  },
+  "test_rows": 418
+}
