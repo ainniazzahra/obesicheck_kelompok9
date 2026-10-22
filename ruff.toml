@@ -1,0 +1,5 @@
+# Lint: ruff check backend ml/src tests
+[lint]
+select = ["E9", "F", "B", "S", "UP", "SIM"]
+# B008: Depends() sebagai default argumen adalah idiom FastAPI. S101/S105/S106: assert & kata sandi uji. UP017/UP035: gaya, bukan bug.
+ignore = ["E501", "B008", "S101", "S105", "S106", "UP017", "UP035"]
